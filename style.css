@@ -1,8 +1,14 @@
+html {
+	scroll-behavior: smooth;
+}
+
+
 body {
 	/*background-image: url("images/beanstalk-dark.png");
 	background-attachment: fixed;
 	background-repeat: repeat;*/
 	width: 100%;
+	margin: 0;
 /*	height: 300vh;*/
 	background: linear-gradient(
 		to bottom,
@@ -20,20 +26,46 @@ body {
 
 header {
 	height: 100vh;
+	display: grid;
+	grid-template-rows: 80% 1fr;
+	grid-template-columns: 45% 1fr 45%;
+	grid-template-areas:
+	"title title title"
+	". arrow ."
+
 
 }
 
 header .title {
-	padding-top: 37vh;
+	grid-area: title;
 	max-width: 60%;
-	margin: auto;
+
 	font-size: 5vh;
 	font-weight: 700;
 	color: white;
 	text-align: center;
-
+	place-self: center;
 }
 
+.arrow {
+	grid-area: arrow;
+	place-self: center;
+	transition: top ease 0.5s;
+	top: 0;
+	position: relative;
+
+	
+}
+
+
+.arrow:hover {
+	top: 15px;
+}
+
+.arrow img {
+	transform: rotate(180deg);
+	height: 70px;
+}
 
 
 
