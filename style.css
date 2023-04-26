@@ -1,3 +1,6 @@
+
+/*#00BFA6*/
+
 html {
 	scroll-behavior: smooth;
 }
@@ -18,31 +21,96 @@ body {
 		white 100%
 	);
 
-	font-family: 'Unbounded', cursive;
+	
 }
 
 
+a {
+	color: inherit;
+/*	text-decoration: underline dotted 2px #00BFA6;*/
+	text-decoration: none;
+}
+
+a:visited {
+	color: inherit;
+}
+
+
+
+button {
+	border: #00BFA6 4px solid;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0);
+	font-family: 'Unbounded', cursive;
+	padding: 20px 40px;
+	font-size: 30px;
+	font-weight: 700;
+	transition: .5s ease;
+}
+
+
+button:hover {
+	background-color: #00BFA6;
+	color: white;
+	cursor: pointer;
+}
+
+.line {
+	width: 90%;
+	margin: 0 auto;
+	height: 6px;
+/*	size: 10px;*/
+	background-color: #00BFA6;
+	border-radius: 10px;
+	grid-area: line;
+}
 
 
 header {
 	height: 100vh;
+	font-family: 'Unbounded', cursive;
+	color: white;
 	display: grid;
-	grid-template-rows: 80% 1fr;
+	grid-template-rows: 10% 70% 1fr;
 	grid-template-columns: 45% 1fr 45%;
 	grid-template-areas:
+	"name . mail"
 	"title title title"
-	". arrow ."
+	". arrow .";
 
 
 }
 
-header .title {
+
+
+#name {
+	grid-area: name;
+	justify-self: start;
+	align-self: center;
+	padding: 30px;
+	
+}
+
+#mail {
+	grid-area: mail;
+	justify-self: end;
+	align-self: center;
+	padding: 30px;
+}
+
+strong {
+	font-weight: 400;
+	color: #00BFA6 ;
+}
+
+
+.title {
 	grid-area: title;
 	max-width: 60%;
 
 	font-size: 5vh;
 	font-weight: 700;
-	color: white;
+
 	text-align: center;
 	place-self: center;
 }
@@ -76,6 +144,7 @@ main {
 	max-width: 75%;
 	margin: 0 auto;
 	row-gap: 100px;
+	font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -85,12 +154,18 @@ main {
 		grid-template-areas: 
 		"text1 img1"
 		"img2 text2"
+		"line line"
+		"contact contact_img";
+
 	}
 
 	.text1 { grid-area: text1 }
 	.text2 { grid-area: text2 }
 	.img1 { grid-area: img1 }
 	.img2 { grid-area: img2 }
+	.contact { grid-area: contact }
+	.contact_img { grid-area: contact_img }
+	.line { grid-area: line }
 }
 
 
@@ -98,17 +173,13 @@ main {
 .content {
 /*	max-width: 50%;*/
 	margin: 40px auto;
-}
-
-
-
-.text {
 	color: black;
 	place-self: center;
 	font-size: 30px;
 	font-weight: 200;
 	text-align: center;
 }
+
 
 .img {
 	max-width: 100%;
@@ -145,11 +216,7 @@ main {
 
 
 
-strong {
-	font-weight: inherit;
-}
-
-strong::after {
+/*strong::after {
 	background-image: url("images/undraw_fun-underline.svg");
 
 	background-size: 100% 100%;
@@ -171,3 +238,4 @@ span {
 }
 
 
+*/
