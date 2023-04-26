@@ -17,35 +17,55 @@ body {
 
 
 
+
 header {
-	font-size: 60px;
-	font-weight: 700;
-	color: white;
-	text-align: center;
 	height: 100vh;
-	
 
 }
 
 header .title {
 	padding-top: 37vh;
+	max-width: 60%;
+	margin: auto;
+	font-size: 5vh;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+
 }
 
 
 
-main {
 
+main {
 	display: grid;
 	grid-template-rows: auto;
-	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	max-width: 75%;
+	margin: 0 auto;
+	row-gap: 100px;
 
+}
+
+@media (min-width: 800px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		"text1 img1"
+		"img2 text2"
+	}
+
+	.text1 { grid-area: text1 }
+	.text2 { grid-area: text2 }
+	.img1 { grid-area: img1 }
+	.img2 { grid-area: img2 }
 }
 
 
 
 .content {
 /*	max-width: 50%;*/
-	margin: 0 auto;
+	margin: 40px auto;
 }
 
 
@@ -88,11 +108,8 @@ main {
 }*/
 
 
-@media (min-width: 600px) {
-	.main {
-		grid-template-columns: 1fr 1fr;
-	}
-}
+
+
 
 
 
