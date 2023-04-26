@@ -20,7 +20,7 @@ body {
 main {
 
 	display: grid;
-	grid-template-rows: 100vh auto;
+	grid-template-rows: 100vh 100vh 100vh;
 	grid-template-columns: 10% 1fr 1fr 10%;
 	grid-template-areas: 
 	". title title ."
@@ -44,6 +44,11 @@ main {
 	color: white;
 	text-align: center;
 }
+
+
+
+
+
 
 .text {
 	color: black;
@@ -96,6 +101,14 @@ strong::after {
 	position: absolute;
 	top: calc(100% - 5.2em);
 	width: calc(100% - 2.8em);
+}
+
+
+span {
+	text-decoration: underline;
+	text-decoration-color: #00BFA6;
+	text-decoration-thickness: .1em;
+	text-decoration-style: dotted;
 }
 
 
