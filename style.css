@@ -43,9 +43,9 @@ button {
 	background-color: rgba(0, 0, 0, 0);
 	font-family: 'Unbounded', cursive;
 	padding: 20px 40px;
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: 700;
-	transition: .5s ease;
+	transition: .3s ease;
 }
 
 
@@ -136,10 +136,27 @@ strong {
 }
 
 
+.text1 { grid-area: text1 }
+.text2 { grid-area: text2 }
+.img1 { grid-area: img1 }
+.img2 { grid-area: img2 }
+.contact { grid-area: contact }
+.contact_img { grid-area: contact_img }
+.line { grid-area: line }
+
 
 main {
 	display: grid;
 	grid-template-rows: auto;
+	grid-template-areas: 
+	"text1"
+	"img1"
+	"text2"
+	"img2"
+	"line"
+	"contact"
+	"contact_img";
+
 	justify-content: center;
 	max-width: 75%;
 	margin: 0 auto;
@@ -159,20 +176,17 @@ main {
 
 	}
 
-	.text1 { grid-area: text1 }
-	.text2 { grid-area: text2 }
-	.img1 { grid-area: img1 }
-	.img2 { grid-area: img2 }
-	.contact { grid-area: contact }
-	.contact_img { grid-area: contact_img }
-	.line { grid-area: line }
 }
 
 
 
 .content {
-/*	max-width: 50%;*/
 	margin: 40px auto;
+	
+}
+
+
+.text {
 	color: black;
 	place-self: center;
 	font-size: 30px;
@@ -180,9 +194,9 @@ main {
 	text-align: center;
 }
 
-
 .img {
-	max-width: 100%;
+	width: 100%;
+	place-self: center;
 }
 
 /*
