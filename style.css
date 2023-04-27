@@ -5,6 +5,7 @@
 
 html {
 	scroll-behavior: smooth;
+	width: 100%;
 }
 
 
@@ -70,6 +71,20 @@ button:hover {
 
 
 
+/*span*/
+
+.green {
+	font-weight: 400;
+	color: #00BFA6 ;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+
+
+
 .line {
 	width: 90%;
 	margin: 0 auto;
@@ -82,64 +97,70 @@ button:hover {
 
 header {
 	height: 100vh;
+	padding-inline: 30px;
+	padding-block: 10px;
+
 	font-family: 'Unbounded', cursive;
 	color: white;
+
 	display: grid;
 	grid-template-rows: 10% 70% 1fr;
-	grid-template-columns: 45% 1fr 45%;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
-	"name . mail"
+	"name name mail"
 	"title title title"
-	". arrow .";
+	"arrow arrow arrow";
 
 
 }
 
 
 
-#name {
+.name {
 	grid-area: name;
 	justify-self: start;
 	align-self: center;
-	padding: 30px;
+/*	margin-left: 15px;*/
 	
 }
 
-#mail {
+.mail {
 	grid-area: mail;
 	justify-self: end;
 	align-self: center;
-	padding: 30px;
-}
-
-.green {
-	font-weight: 400;
-	color: #00BFA6 ;
-}
-
-.bold {
-	font-weight: 700;
+/*	margin-right: 15px;*/
 }
 
 
-/*.underline {
-	background-image: url("images/underline.svg");
-	background-position: 0 1em;
-	background-repeat: no-repeat;
-	background-size: 130px;
-}*/
+.credits {
+	font-size: .8rem;
+}
+
+@media (min-width: 700px){
+	.credits {
+		font-size: 1rem;
+	}
+}
 
 
 .title {
 	grid-area: title;
-	max-width: 60%;
+/*	max-width: 60%;*/
 
-	font-size: 5vh;
+	font-size: 30px;
 	font-weight: 700;
 
 	text-align: center;
 	place-self: center;
 }
+
+@media (min-width: 700px) {
+	.title {
+		font-size: 40px;
+	}
+}
+
+
 
 .arrow {
 	grid-area: arrow;
@@ -147,7 +168,6 @@ header {
 	transition: top ease 0.5s;
 	top: 0;
 	position: relative;
-
 	
 }
 
@@ -162,9 +182,9 @@ header {
 	transition: color 0.5s;
 }
 
-.arrow:hover i {
-/*	color: #00BFA6;*/
-}
+/*.arrow:hover i {
+	color: #00BFA6;
+}*/
 
 
 
