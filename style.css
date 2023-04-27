@@ -73,6 +73,18 @@ button:hover {
 
 
 
+h1 {
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'Unbounded', cursive;
+}
+
+@media (min-width: 700px) {
+	h1 {
+		font-size: 40px;
+	}
+}
+
 
 /*span*/
 
@@ -150,18 +162,13 @@ header {
 	grid-area: title;
 /*	max-width: 60%;*/
 
-	font-size: 30px;
-	font-weight: 700;
+
 
 	text-align: center;
 	place-self: center;
 }
 
-@media (min-width: 700px) {
-	.title {
-		font-size: 40px;
-	}
-}
+
 
 
 
@@ -275,31 +282,91 @@ main {
 
 #slide {
 	height: 100%;
-	width: 0;
+	width: 100%;
 	position: fixed;
 	z-index: 1;
+	left: 100%;
 	top: 0;
-	right: 0;
 	overflow-x: hidden;
 
-	transition: .5s;
+	transition: .7s;
+	-webkit-transition: .7s;
+	-moz-transition: .7s;
+	-o-transition: .7s;
+
 	background-color: black;
 	color: white;
 
 	display: grid;
-	grid-template-columns: 10% 1fr 1fr;
-	place-content: center;
+	grid-template-columns: 1fr;
+	grid-template-rows: 20% auto;
+	grid-template-areas: 
+	"arrow"
+	"slide_title"
+	"slide_desc";
+}
 
+
+@media (min-width: 700px) {
+	#slide {
+		grid-template-rows: auto;
+		grid-template-columns: 10% 1fr 1fr;
+		grid-template-areas: 
+		"arrow slide_title slide_desc";
+	}
 }
 
 
 #slide a {
-	font-size: 50px;
-	padding: 30px;
+	font-size: 30px;
+	padding: 5px;
+	transition: .6s;
+	position: relative;
+	right: 0;
+	place-self: start;
 }
+
+@media (min-width: 700px) {
+	#slide a {
+		font-size: 50px;
+		padding: 30px;
+		place-self: center;
+	}
+}
+
+#slide a:hover {
+	right: 15px;
+}
+
 
 .slide_content {
-	transition: .2s;
-	display: block;
+	place-self: center;
+	margin: 40px;
 }
 
+ 
+.slide_desc { grid-area: slide_desc }
+
+.slide_title {
+	grid-area: slide_title;
+	position: relative;
+}
+
+
+.slide_title::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background-color: var(--main-color);
+	transition: width .6s;
+}
+
+
+.slide_title:hover::before {
+	right: 0;
+	left: auto;
+	width: 0;
+}

@@ -27,12 +27,14 @@
 	<script type="text/javascript">
 		
 		function open_about() {
-			document.getElementById("slide").style.width = "100%";
+			document.getElementById("slide").style.left = "0";
+			// document.getElementById("slide").style.color = "white";
 			document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 		}
 
 		function close_about() {
-			document.getElementById("slide").style.width = "0";
+			document.getElementById("slide").style.left = "100%";
+			// document.getElementById("slide").style.color = "black";
 			document.getElementsByTagName('body')[0].style.overflow = 'visible';
 
 		}
@@ -57,10 +59,10 @@
 				<span class="credits mail">mfgapinski<strong class="green">[at]</strong>gmail.com</span>
 
 			<div class="title">
+				<h1>
 				Nowoczesna witryna?<br>
 				To <strong class="green bold">Twoja</strong> decyzja.
-
-				<!-- <img src="images/arrow.svg" />  -->
+				</h1>
 			</div>
 
 
@@ -68,7 +70,8 @@
 				<!-- <img src="images/arrow.svg"> -->
 
 				<!-- <span class="material-symbols-outlined">expand_more</span> -->
-				<i class="material-icons">arrow_downward</i>
+				<!-- <i class="material-icons">arrow_downward</i> -->
+				<i class="fa-solid fa-chevron-down"></i>
 			</a>
 
 
@@ -88,7 +91,7 @@
 
 			<div class="content text text2">
 				<p>Jestem młodym programistą, z otwartym umysłem i świeżym spojrzeniem na branżę.</p>
-				<a href="javascript:void(0)" onclick=""><button>O mnie</button></a>
+				<a href="javascript:void(0)" onclick="open_about()"><button>O mnie</button></a>
 			</div>
 
 			<img class="content img img2" src="images/proud_coder.png">
@@ -122,9 +125,9 @@
 			<i class="fa-solid fa-chevron-left"></i>
 		</a>
 
-		<div class="text slide_content">Lorem ipsum dolor sit amet.</div>
-		<div class="text">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lacus est. Curabitur vel dapibus lacus, a finibus quam. Vivamus vehicula, nunc ac suscipit luctus, sapien dolor condimentum metus, quis consectetur augue ligula non dui. Nunc dignissim mollis augue eget blandit. Mauris quis nunc vitae lorem convallis dictum. Duis in enim sed dolor rhoncus scelerisque nec a ligula. Maecenas condimentum convallis tellus, id rutrum est finibus id. Integer in purus feugiat, dapibus ipsum et, imperdiet turpis.
+		<div class="text slide_content slide_title"><h1>Mikołaj Feliks Gapiński</h1></div>
+		<div class="text slide_content slide_desc">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae finibus tellus. Suspendisse nec massa leo. In eleifend, justo eget dictum iaculis, elit quam pulvinar nisl, non eleifend magna nulla a tellus. 
 		</div>
 		<!-- <img class="img slide_content" src="images/designer.png"> -->
 		
