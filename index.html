@@ -22,6 +22,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+	<script src="https://kit.fontawesome.com/7b6b7b51eb.js" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		
+		function open_about() {
+			document.getElementById("slide").style.width = "100%";
+			document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+		}
+
+		function close_about() {
+			document.getElementById("slide").style.width = "0";
+			document.getElementsByTagName('body')[0].style.overflow = 'visible';
+
+		}
+
+	</script>
+
+
+
 
 </head>
 
@@ -29,7 +48,7 @@
 <body>
 
 
-
+	<div id="container">
 
 		<header>
 
@@ -61,36 +80,69 @@
 			<div class="content text text1">
 				
 				<p>Twoja strona może być dostosowana do wymagań dzisiejszego rynku. Albo może przedstawiać Twoją ofertę w najlepszym świetle. Albo wszystko na raz.</p>
-				<a href="#contact"><button>Kontakt</button></a>
+				<a href="#contact_scroll"><button>Kontakt</button></a>
 
 			</div>
 
-			<img class="content img img1" src="images/xd.png">
+			<img class="content img img1" src="images/devices.png">
 
 			<div class="content text text2">
 				<p>Jestem młodym programistą, z otwartym umysłem i świeżym spojrzeniem na branżę.</p>
-				<a href="#"><button>O mnie</button></a>
+				<a href="javascript:void(0)" onclick=""><button>O mnie</button></a>
 			</div>
 
 			<img class="content img img2" src="images/proud_coder.png">
 
 			<div class="line"></div>
 
-			<div class="content text contact" id="contact">
+			<div class="content text contact">
 				Mikołaj Feliks Gapiński<br>
 				mfgapinski<strong class="green">[at]</strong>gmail.com<br>
 				+48 788 654 512
+				<div class="social">
+					<a href="https://facebook.com/faelern" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+					<a href="https://www.instagram.com/mikolaj_gapinski/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+				</div>
 			</div>
 
 			<img class="content img contact_img" src="images/profile.png">
+
+			<div id="contact_scroll"></div>
 
 			
 
 		</main>
 
+	</div>
 
+
+	<div id="slide">
+
+		<a href="javascript:void(0)" class="close_button slide_content" onclick="close_about()">
+			<i class="fa-solid fa-chevron-left"></i>
+		</a>
+
+		<div class="text slide_content">Lorem ipsum dolor sit amet.</div>
+		<div class="text">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lacus est. Curabitur vel dapibus lacus, a finibus quam. Vivamus vehicula, nunc ac suscipit luctus, sapien dolor condimentum metus, quis consectetur augue ligula non dui. Nunc dignissim mollis augue eget blandit. Mauris quis nunc vitae lorem convallis dictum. Duis in enim sed dolor rhoncus scelerisque nec a ligula. Maecenas condimentum convallis tellus, id rutrum est finibus id. Integer in purus feugiat, dapibus ipsum et, imperdiet turpis.
+		</div>
+		<!-- <img class="img slide_content" src="images/designer.png"> -->
+		
+
+
+		
+	</div>
 
 </body>
 
 
 </html>
+
+
+
+
+
+
+
+
+
