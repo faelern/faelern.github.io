@@ -63,6 +63,8 @@ button:hover {
 	background-color: #00BFA6;
 	color: white;
 	cursor: pointer;
+	padding: 22px 44px;
+	margin-top: 16px;
 }
 
 
@@ -110,9 +112,13 @@ header {
 	padding: 30px;
 }
 
-.color {
+.green {
 	font-weight: 400;
 	color: #00BFA6 ;
+}
+
+.bold {
+	font-weight: 700;
 }
 
 
@@ -145,15 +151,21 @@ header {
 	
 }
 
-
 .arrow:hover {
 	top: 15px;
 }
 
-.arrow img {
-	transform: rotate(180deg);
-	height: 70px;
+
+.arrow i {
+	font-size: 60px;
+	color: white;
+	transition: color 0.5s;
 }
+
+.arrow:hover i {
+/*	color: #00BFA6;*/
+}
+
 
 
 .text1 { grid-area: text1 }
