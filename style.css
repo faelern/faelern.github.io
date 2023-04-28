@@ -269,7 +269,7 @@ main {
 	
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
 	.text {
 		font-size: 30px;
 	}
@@ -289,7 +289,7 @@ main {
 .projects_wrapper { 
 	width: 100%; 
 	padding: 1%;
-	font-size: 25px;
+	font-size: 20px;
 	display: grid;
 /*	grid-auto-flow: column;*/
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -299,6 +299,12 @@ main {
 	column-gap: 7%;
 	row-gap: 50px;
 
+}
+
+@media (min-width: 700px) {
+	.projects_wrapper {
+		font-size: 25px;
+	}
 }
 
 .project {
