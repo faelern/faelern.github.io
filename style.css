@@ -241,8 +241,8 @@ main {
 	"text1"
 	"img2"
 	"text2"
-	"my_work"
 	"offer"
+	"my_work"
 	"action"
 	"line"
 	"contact_img"
@@ -263,8 +263,8 @@ main {
 		grid-template-areas: 
 		"text1 img1"
 		"img2 text2"
-		"my_work my_work"
 		"offer offer"
+		"my_work my_work"
 		"action action"	
 		"line line"
 		"contact contact_img";
@@ -297,21 +297,6 @@ main {
 
 
 
-.offer p, ul {
-	font-size: 20px;
-	font-weight: 200;
-}
-
-
-@media (min-width: 700px) {
-	.offer p, ul {
-		font-size: 27px;
-	}
-}
-
-li::marker {
-	color: #00BFA6;
-}
 
 
 
@@ -348,7 +333,6 @@ li::marker {
 }
 
 .project {
-/*	min-width: 300px;*/
 	max-width: 600px;
 	justify-self: center;
 }
@@ -396,6 +380,51 @@ li::marker {
 .overlay:hover + .project_img {
 	filter: grayscale(0%);
 }
+
+
+
+.offer_wrapper {
+
+	width: 100%; 
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	column-gap: 4%;
+	row-gap: 50px;
+
+}
+
+
+.offer_card {
+
+	color: #333;
+	font-size: 30px;
+	font-family: 'Unbounded';
+	text-align: center;
+	border-radius: 10px;
+	border: 4px #00BFA6 solid;
+	min-width: 350px;
+	height: 500px;
+	justify-self: center;
+
+
+}
+
+
+@media (min-width: 700px){
+	.offer_card {
+		max-width: 350px;
+
+	}
+}
+
+.offer_card_content {
+	margin: 50% 0;
+}
+
+.offer_card i {
+	font-size: 80px;
+}
+
 
 
 
